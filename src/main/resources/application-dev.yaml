@@ -1,0 +1,15 @@
+server:
+  port: 18090
+
+spring:
+  datasource:
+    username: xio
+    password: Xio123456!
+    url: jdbc:mysql://sh-cdb-bu4yyg3o.sql.tencentcdb.com:59754/xio?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 测试字典列表
+nodeDict:
+  test:
+    name: 'test'
+    value: 'ns=2;s='

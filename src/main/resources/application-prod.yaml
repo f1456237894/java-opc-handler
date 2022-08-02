@@ -1,0 +1,15 @@
+server:
+  port: 28090
+
+spring:
+  datasource:
+    username: xio
+    password: 123456
+    url: jdbc:mysql://localhost:3306/xio?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#目标检测python路径
+yoloPythonConfig:
+  command:
+    start: "python C:\Users\dell\Desktop\scriptDemo.py"
+    end: "taskkill /im python.exe /f"
