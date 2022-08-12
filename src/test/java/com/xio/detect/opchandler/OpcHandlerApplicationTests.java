@@ -23,7 +23,7 @@ class OpcHandlerApplicationTests {
 	@Test
 	void testOPC() {
 		try {
-			String EndPointUrl = "opc.tcp://127.0.0.1:49320";
+			String EndPointUrl = "opc.tcp://192.168.1.108:49320";
 			//安全策略选择
 			EndpointDescription[] endpointDescription = UaTcpStackClient.getEndpoints(EndPointUrl).get();
 			//过滤掉不需要的安全策略，选择一个自己需要的安全策略

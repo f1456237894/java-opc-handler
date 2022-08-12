@@ -9,7 +9,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 # 测试字典列表
-nodeDict:
-  test:
+nodeList:
+  - url: 'opc.tcp://192.168.1.108:49320'
     name: 'test'
-    value: 'ns=2;s='
+    namespaceIndex: 2
+    identifier: '通道 1.设备 1.test'
+  - url: 'opc.tcp://192.168.1.108:49320'
+    name: 'test2'
+    namespaceIndex: 2
+    identifier: '通道 1.设备 1.test'
