@@ -5,16 +5,17 @@ spring:
   datasource:
     username: xio
     password: Xio123456!
-    url: jdbc:mysql://sh-cdb-bu4yyg3o.sql.tencentcdb.com:59754/xio?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/xio
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 # 测试字典列表
-nodeList:
-  - url: 'opc.tcp://192.168.1.108:49320'
-    name: 'test'
-    namespaceIndex: 2
-    identifier: '通道 1.设备 1.test'
-  - url: 'opc.tcp://192.168.1.108:49320'
-    name: 'test2'
-    namespaceIndex: 2
-    identifier: '通道 1.设备 1.test'
+opcconfig:
+  nodes:
+    - url: 'opc.tcp://192.168.1.108:49320'
+      name: 'test'
+      namespaceIndex: 2
+      identifier: '通道 1.设备 1.test'
+    - url: 'opc.tcp://192.168.1.108:49320'
+      name: 'test2'
+      namespaceIndex: 2
+      identifier: '通道 1.设备 1.test'

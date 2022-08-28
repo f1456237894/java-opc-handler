@@ -8,11 +8,11 @@ public interface ActionService {
      * 将停止值写入OPC
      * @return 是否成功
      */
-    boolean action();
+    boolean action(Integer id);
 
     /**
      * 将启动值写入OPC
      * @return 是否成功
      */
-    boolean reset();
+    boolean reset(Integer id);
 }
