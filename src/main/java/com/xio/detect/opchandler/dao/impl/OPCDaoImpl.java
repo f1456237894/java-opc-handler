@@ -9,6 +9,7 @@ import org.eclipse.milo.opcua.stack.client.UaTcpStackClient;
 import org.eclipse.milo.opcua.stack.core.security.SecurityPolicy;
 import org.eclipse.milo.opcua.stack.core.types.builtin.LocalizedText;
 import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;
+import org.eclipse.milo.opcua.stack.core.types.enumerated.MessageSecurityMode;
 import org.eclipse.milo.opcua.stack.core.types.structured.EndpointDescription;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -28,8 +29,12 @@ public class OPCDaoImpl implements OPCDao {
         //安全策略选择
         EndpointDescription[] endpointDescription = UaTcpStackClient.getEndpoints(EndPointUrl).get();
         //过滤掉不需要的安全策略，选择一个自己需要的安全策略
+//        EndpointDescription endpoint = Arrays.stream(endpointDescription)
+//                .filter(e -> e.getSecurityPolicyUri().equals(SecurityPolicy.None.getSecurityPolicyUri()))
+//                .findFirst().orElseThrow(() -> new Exception("no desired endpoints returned"));
+
         EndpointDescription endpoint = Arrays.stream(endpointDescription)
-                .filter(e -> e.getSecurityPolicyUri().equals(SecurityPolicy.None.getSecurityPolicyUri()))
+                .filter(e -> e.getSecurityPolicyUri().equals(SecurityPolicy.Basic256.getSecurityPolicyUri()))
                 .findFirst().orElseThrow(() -> new Exception("no desired endpoints returned"));
 
         OpcUaClientConfig config = OpcUaClientConfig.builder()

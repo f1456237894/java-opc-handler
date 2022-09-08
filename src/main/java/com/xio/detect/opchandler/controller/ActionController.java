@@ -32,4 +32,5 @@ public class ActionController {
         boolean status = actionService.reset(id);
         return status ? resultParser.getSuccess() : resultParser.getFailure();
     }
+
 }
