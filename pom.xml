@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.xio.detect</groupId>
 	<artifactId>opc-handler</artifactId>
-	<version>1.0.0-BETA</version>
+	<version>1.0.1-BETA</version>
 	<name>opc-handler</name>
 	<description>An opc handler service for detect cpp</description>
 	<properties>

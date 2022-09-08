@@ -15,4 +15,11 @@ public interface ActionService {
      * @return 是否成功
      */
     boolean reset(Integer id);
+
+    /**
+     * 确定OPC服务是否开启
+     * @return 是否成功
+     */
+    boolean startApp();
+    boolean stopApp();
 }

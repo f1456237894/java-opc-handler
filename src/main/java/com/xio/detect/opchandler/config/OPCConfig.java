@@ -15,4 +15,5 @@ import java.util.List;
 @ConfigurationProperties(prefix = "opcconfig")
 public class OPCConfig {
     private List<OPCNode> nodes;
+    private OPCNode startNode;
 }

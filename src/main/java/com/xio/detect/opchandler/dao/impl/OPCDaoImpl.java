@@ -24,6 +24,9 @@ public class OPCDaoImpl implements OPCDao {
     @Override
     public OpcUaClient getConnection(Integer id) throws Exception {
         OPCNode node = this.getNodeById(id);
+        if (id == -1) {
+            node = this.getStartNode();
+        }
         String EndPointUrl = node.getUrl();
         String nodeName = node.getName();
         //安全策略选择
@@ -53,5 +56,9 @@ public class OPCDaoImpl implements OPCDao {
 
     public OPCNode getNodeById(Integer id) {
         return opcConfig.getNodes().get(id);
+    }
+
+    public OPCNode getStartNode() {
+        return opcConfig.getStartNode();
     }
 }
