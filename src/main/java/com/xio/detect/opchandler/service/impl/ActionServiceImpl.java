@@ -41,6 +41,7 @@ public class ActionServiceImpl implements ActionService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return false;
     }
 
     private boolean actionByValue(boolean value, Integer id) {
